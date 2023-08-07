@@ -3,23 +3,21 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: latest
-  
-  pre-build:
+      nodejs: latest  # Use the Node.js version you need
+  pre_build:
     commands:
-      - echo pre-build phase
-
+      - echo "Installing dependencies..."
+      - npm install
   build:
     commands:
-      - echo build phase
-      - npm install
+      - echo "Building the Node.js application..."
+      #- npm run build  # Replace with your build command
   post_build:
     commands:
       - echo post-build phase
       - echo build completed on 'date'
       - echo artifacts compiled on s3
-
 artifacts:
   files:
-    - '**/*'
-    
+    - '**/*'  # Include all files in the build output
+  base-directory: hellojs  # Replace with your application's directory
