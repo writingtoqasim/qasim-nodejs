@@ -7,5 +7,5 @@ if ! command -v node >/dev/null 2>&1; then
 fi
 
 # Example: Install application dependencies using npm
-cd /var/www/hellojs
+cd /home/ec2-user/hellojs
 npm install
