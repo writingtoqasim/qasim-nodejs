@@ -20,4 +20,3 @@ phases:
 artifacts:
   files:
     - '**/*'  # Include all files in the build output
-  name: hellojs  # Replace with your application's directory
