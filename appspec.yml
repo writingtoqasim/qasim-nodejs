@@ -20,9 +20,9 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/hello.js
+    destination: /home/ec2-user/hello.js
 permissions:
-  - object: /var/www/hello.js
+  - object: /home/ec2-user/hello.js
     pattern: "**"
     owner: ec2-user
     group: ec2-user
