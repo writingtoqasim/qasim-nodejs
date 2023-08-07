@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+  
+  pre-build:
+    commands:
+      - echo pre-build phase
+
+  build:
+    commands:
+      - echo build phase
+      - npm install
+  post_build:
+    commands:
+      - echo post-build phase
+      - echo build completed on 'date'
+      - echo artifacts compiled on s3
+
+artifacts:
+  files:
+    - '**/*'
+    
