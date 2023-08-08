@@ -1,6 +1,14 @@
 #!/bin/bash
 
-# Example: Install any required dependencies or perform pre-installation tasks
-echo "Running pre-installation tasks..."
-# Add your pre-installation commands here
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
+. ~/.nvm/nvm.sh
+nvm install node
 
+#create our working directory if it doesnt exist
+DIR="/home/ec2-user/nodejs-app"
+if [ -d "$DIR" ]; then
+  echo "${DIR} exists"
+else
+  echo "Creating ${DIR} directory"
+  mkdir ${DIR}
+fi

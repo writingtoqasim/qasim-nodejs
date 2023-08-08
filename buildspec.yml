@@ -7,7 +7,7 @@ phases:
   pre_build:
     commands:
       - echo "Installing dependencies..."
-      - npm install
+      - npm install -g npm
   build:
     commands:
       - echo "Building the Node.js application..."
@@ -19,4 +19,4 @@ phases:
       - echo artifacts compiled on s3
 artifacts:
   files:
-    - '**/*'  # Include all files in the build output
+    - "build /**/*"  # Include all files in the build output
