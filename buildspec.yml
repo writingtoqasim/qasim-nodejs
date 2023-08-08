@@ -28,9 +28,20 @@ phases:
     runtime-versions:
       nodejs: latest  # Use the appropriate Node.js version
     commands:
+      - npm install 
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
       - npm install
+      - npm install express
   build:
     commands:
-      - npm run build  # Replace with your build command
+      - echo Build started on `date`
+      - echo Compiling the Node.js code
+      - node app.js
+  post_build:
+    commands:
+      - echo Build completed on `date`
+  
 artifacts:
   files: '**/*'
