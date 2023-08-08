@@ -16,3 +16,4 @@
 # sudo chmod o-rwx /home/ec2-user/hello.js
 # npm install
 
+cd /home/ec2-user/app/node app.js

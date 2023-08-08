@@ -1,22 +1,36 @@
+# version: 0.2
+
+# phases:
+#   install:
+#     runtime-versions:
+#       nodejs: latest  # Use the Node.js version you need
+#   pre_build:
+#     commands:
+#       - echo "Installing dependencies..."
+#       - npm install -g npm
+#   build:
+#     commands:
+#       - echo "Building the Node.js application..."
+#       #- npm run build  # Replace with your build command
+#   post_build:
+#     commands:
+#       - echo post-build phase
+#       - echo build completed on 'date'
+#       - echo artifacts compiled on s3
+# artifacts:
+#   files:
+#     - "build /**/*"  # Include all files in the build output
+
 version: 0.2
 
 phases:
   install:
     runtime-versions:
-      nodejs: latest  # Use the Node.js version you need
-  pre_build:
+      nodejs: latest  # Use the appropriate Node.js version
     commands:
-      - echo "Installing dependencies..."
-      - npm install -g npm
+      - npm install
   build:
     commands:
-      - echo "Building the Node.js application..."
-      #- npm run build  # Replace with your build command
-  post_build:
-    commands:
-      - echo post-build phase
-      - echo build completed on 'date'
-      - echo artifacts compiled on s3
+      - npm run build  # Replace with your build command
 artifacts:
-  files:
-    - "build /**/*"  # Include all files in the build output
+  files: '**/*'

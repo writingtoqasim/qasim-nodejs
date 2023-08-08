@@ -3,10 +3,10 @@
 # Example: Start the Node.js application using npm
 
 #give permission for everything in the express-app directory
-sudo chmod -R 777 /home/ec2-user/nodejs-app
+sudo chmod -R 777 /home/ec2-user/app
 
 #navigate into our working directory where we have all our github files
-cd /home/ec2-user/nodejs-app
+cd /home/ec2-user/app
 
 #add npm and node to path
 export NVM_DIR="$HOME/.nvm"	
