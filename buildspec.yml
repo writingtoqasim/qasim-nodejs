@@ -37,8 +37,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - cd /home/ec2-user/app/
-      - node app.js
+      
   post_build:
     commands:
       - echo Build completed on `date`
